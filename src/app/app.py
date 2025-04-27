@@ -1,6 +1,6 @@
 from flask import Flask, render_template
 from src.scrapers.reuters_rss import ReutersRSSScraper
-from src.ai.text_processing import NewsProcessor
+from ai.text_processing import NewsProcessor
 import logging
 from .filters import datetimeformat
 

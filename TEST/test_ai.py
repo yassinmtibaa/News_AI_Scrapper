@@ -1,5 +1,5 @@
-from ai.text_processing import NewsProcessor
-from scrapers.reuters_scraper import ReutersScraper
+from src.ai.text_processing import NewsProcessor
+from src.scrapers.reuters_scraper import ReutersScraper
 
 processor = NewsProcessor()
 scraper = ReutersScraper()

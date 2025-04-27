@@ -1,5 +1,5 @@
 from src.scrapers.reuters_scraper import ReutersScraper
-from src.ai.text_processing import NewsProcessor
+from ai.text_processing import NewsProcessor
 
 def test_workflow():
     scraper = ReutersScraper()

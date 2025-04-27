@@ -11,7 +11,7 @@ setup(
         'transformers',
         'flask',
         'python-dotenv',
-        'tensorflow>=2.0,<3.0'
+        'tensorflow>=2.0,<3.0',
         'pytz'
     ],
 )
