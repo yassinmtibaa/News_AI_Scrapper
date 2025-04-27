@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Reuters News Aggregator</title>
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; }
+        .article { margin-bottom: 25px; padding: 15px; border-radius: 8px; background: #f8f9fa; }
+        h1 { color: #d50000; } /* Reuters red */
+        .category { 
+            display: inline-block; 
+            padding: 2px 8px; 
+            background: #d50000; 
+            color: white; 
+            border-radius: 4px;
+            font-size: 0.8em;
+        }
+        .timestamp { color: #666; font-size: 0.9em; }
+        .ai-summary { 
+            background: #e3f2fd; 
+            padding: 10px; 
+            border-left: 3px solid #2196f3;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>📰 Reuters News Aggregator</h1>
+    <p>Latest stories from Reuters RSS feeds</p>
+    
+    {% for article in articles %}
+    <div class="article">
+        <span class="category">{{ article.category|upper }}</span>
+        <span class="timestamp">{{ article.published|datetimeformat }}</span>
+        <h2><a href="{{ article.url }}" target="_blank">{{ article.title }}</a></h2>
+        
+        {% if article.summary %}
+        <p>{{ article.summary }}</p>
+        {% endif %}
+        
+        {% if article.ai_summary %}
+        <div class="ai-summary">
+            <strong>AI Summary:</strong> {{ article.ai_summary }}
+        </div>
+        {% endif %}
+    </div>
+    {% endfor %}
+    
+    <script>
+        // Auto-refresh every 15 minutes
+        setTimeout(() => location.reload(), 900000);
+    </script>
+</body>
+</html>

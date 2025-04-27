@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: news_ai
+Version: 0.1
+Requires-Dist: beautifulsoup4
+Requires-Dist: requests
+Requires-Dist: transformers
+Requires-Dist: flask
+Requires-Dist: python-dotenv
+Dynamic: requires-dist

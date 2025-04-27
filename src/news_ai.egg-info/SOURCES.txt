@@ -1,0 +1,14 @@
+setup.py
+src/ai/__init__.py
+src/ai/model_training.py
+src/ai/text_processing.py
+src/app/__init__.py
+src/app/app.py
+src/news_ai.egg-info/PKG-INFO
+src/news_ai.egg-info/SOURCES.txt
+src/news_ai.egg-info/dependency_links.txt
+src/news_ai.egg-info/requires.txt
+src/news_ai.egg-info/top_level.txt
+src/scrapers/__init__.py
+src/scrapers/guardian_scraper.py
+src/scrapers/reuters_scraper.py
